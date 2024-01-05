@@ -17,5 +17,5 @@ RUN mamba install --quiet --yes \
 RUN mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
-COPY files/config/jupyter_notebook_config.json /etc/jupyter/jupyter_notebook_config.json
+COPY jupyter_notebook_config.json /etc/jupyter/jupyter_notebook_config.json
 USER ${NB_USER}
